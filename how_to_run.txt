@@ -1,0 +1,4 @@
+To run the Model do following steps:
+
+-Make a folder name "faces".
+-change the path of the "faces" folder in both the files and first run "model_creation.py" and then run "model_training_and_prediction.py".
