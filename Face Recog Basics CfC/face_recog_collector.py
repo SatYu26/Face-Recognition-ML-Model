@@ -1,11 +1,10 @@
 import cv2
 import numpy as np
-
 import os
 
 cap = cv2.VideoCapture(0)
 
-detector = cv2.CascadeClassifier("../../datasets/haarcascade_frontalface_default.xml")
+detector = cv2.CascadeClassifier("./datasets/haarcascade_frontalface_default.xml")
 
 name = input("Enter your name : ")
 
@@ -39,10 +38,10 @@ while True:
         frames.append(gray.flatten())
         outputs.append([name])
 
-X = np.array(frames)
-y = np.array(outputs)
+X = np.array(frames) # converting into array
+y = np.array(outputs) # converting into array
 
-data = np.hstack([y, X])
+data = np.hstack([y, X]) # stacking horizontally and converting into data
 
 f_name = "face_data.npy"
 
